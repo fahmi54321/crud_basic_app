@@ -76,7 +76,7 @@ class MyHomePage extends StatelessWidget {
                 children: [
                   Container(
                     child: Text(
-                      transaction.amount.toString(),
+                      '\$${transaction.amount}',
                       style: TextStyle(
                         fontWeight: FontWeight.bold,
                         fontSize: 20,
