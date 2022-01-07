@@ -24,8 +24,45 @@ class MyApp extends StatelessWidget {
         // is not restarted.
         primarySwatch: Colors.blue,
       ),
-      home: Text(''),
+      home: MyHomePage(),
     );
   }
 }
 
+class MyHomePage extends StatelessWidget {
+  const MyHomePage({Key? key}) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        title: Text(
+          'Crup Basic App',
+        ),
+      ),
+      body: Column(
+        children: [
+          Card(
+            elevation: 5,
+            color: Colors.blue,
+            child: Container(
+              width: double.infinity,
+              child: Text(
+                'Chart',
+              ),
+            ),
+          ),
+          Container(
+            width: double.infinity,
+            child: Card(
+              color: Colors.red,
+              child: Text(
+                'List of text',
+              ),
+            ),
+          ),
+        ],
+      ),
+    );
+  }
+}
