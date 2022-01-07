@@ -43,7 +43,6 @@ class MyHomePage extends StatelessWidget {
         amount: 69.99,
         date: DateTime.now(),
       ),
-
       Transaction(
         id: 't2',
         title: 'New shoes 2',
@@ -70,15 +69,15 @@ class MyHomePage extends StatelessWidget {
               ),
             ),
           ),
-          Container(
-            width: double.infinity,
-            child: Card(
-              color: Colors.red,
-              child: Text(
-                'List of text',
-              ),
-            ),
-          ),
+          Column(
+            children: transactions.map((transaction) {
+              return Card(
+                child: Text(
+                  transaction.title,
+                ),
+              );
+            }).toList(),
+          )
         ],
       ),
     );
