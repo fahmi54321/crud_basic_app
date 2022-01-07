@@ -70,6 +70,27 @@ class MyHomePage extends StatelessWidget {
               ),
             ),
           ),
+          Card(
+              elevation: 5,
+              child: Container(
+                padding: EdgeInsets.all(10),
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.end,
+                  children: [
+                    TextField(
+                      decoration: InputDecoration(labelText: 'Title'),
+                    ),
+                    TextField(
+                      decoration: InputDecoration(labelText: 'Amount'),
+                    ),
+                    FlatButton(
+                      onPressed: () {},
+                      child: Text('Add Transactions'),
+                      textColor: Colors.purple,
+                    ),
+                  ],
+                ),
+              )),
           Column(
             children: transactions.map((transaction) {
               return Card(
