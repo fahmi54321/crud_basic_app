@@ -78,6 +78,19 @@ class MyHomePage extends StatelessWidget {
                     child: Text(
                       transaction.amount.toString(),
                     ),
+                    margin: EdgeInsets.symmetric(
+                      vertical: 10,
+                      horizontal: 15,
+                    ),
+                    decoration: BoxDecoration(
+                      border: Border.all(
+                        color: Colors.black,
+                        width: 2,
+                      ),
+                    ),
+                    padding: EdgeInsets.all(
+                      10,
+                    ),
                   ),
                   Column(
                     children: [
