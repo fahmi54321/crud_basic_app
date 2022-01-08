@@ -41,6 +41,14 @@ class MyHomePage extends StatelessWidget {
         title: Text(
           'Crup Basic App',
         ),
+        actions: [
+          IconButton(
+            icon: Icon(
+              Icons.add,
+            ),
+            onPressed: () {},
+          )
+        ],
       ),
       body: SingleChildScrollView(
         child: Column(
@@ -55,10 +63,16 @@ class MyHomePage extends StatelessWidget {
                 ),
               ),
             ),
-
             UserTransactions(),
           ],
         ),
+      ),
+      floatingActionButtonLocation: FloatingActionButtonLocation.centerFloat,
+      floatingActionButton: FloatingActionButton(
+        child: Icon(
+          Icons.add,
+        ),
+        onPressed: () {},
       ),
     );
   }
