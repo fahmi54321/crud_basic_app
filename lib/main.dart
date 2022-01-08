@@ -33,7 +33,8 @@ class MyApp extends StatelessWidget {
 }
 
 class MyHomePage extends StatelessWidget {
-  const MyHomePage({Key? key}) : super(key: key);
+  final titleController = TextEditingController();
+  final amountCOntroller = TextEditingController();
 
   @override
   Widget build(BuildContext context) {
@@ -79,9 +80,11 @@ class MyHomePage extends StatelessWidget {
                   children: [
                     TextField(
                       decoration: InputDecoration(labelText: 'Title'),
+                      controller: titleController,
                     ),
                     TextField(
                       decoration: InputDecoration(labelText: 'Amount'),
+                      controller: amountCOntroller,
                     ),
                     FlatButton(
                       onPressed: () {},
